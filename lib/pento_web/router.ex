@@ -83,5 +83,11 @@ defmodule PentoWeb.Router do
     get "/users/confirm", UserConfirmationController, :new
     post "/users/confirm", UserConfirmationController, :create
     get "/users/confirm/:token", UserConfirmationController, :confirm
+
+    live "/questions", QuestionLive.Index, :index
+    live "/questions/new", QuestionLive.Index, :new
+    live "/questions/:id/edit", QuestionLive.Index, :edit
+    live "/questions/:id", QuestionLive.Show, :show
+    live "/questions/:id/show/edit", QuestionLive.Show, :edit
   end
 end
