@@ -70,6 +70,7 @@ defmodule PentoWeb.Router do
 
     live "/guess", WrongLive
     live "/promo", PromoLive
+    live "/survey", SurveyLive, :index
 
     get "/users/settings", UserSettingsController, :edit
     put "/users/settings/update_password", UserSettingsController, :update_password
