@@ -3,6 +3,7 @@
 
     <%= f = form_for @changeset, "#",
 phx_submit: "save",
+phx_target: @myself,
 id: "demographic-form"%>
     <%= label f, :gender %>
     <%= select f, :gender, ["female", "male", "other", "prefer not to say"] %>
