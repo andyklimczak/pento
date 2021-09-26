@@ -1,0 +1,26 @@
+<section class="row">
+    <h1>
+        Survey Results
+    </h1>
+</section>
+<%= for {product, rating} <- @products_with_average_ratings do%>
+<section class="row">
+    <div>
+        <%= product %>
+        <%= rating %>
+    </div>
+</section>
+<% end %>
+<form phx-change="age_group_filter" phx-target="<%= @myself %>">
+    <label>Fitler by age group:</label>
+    <select name="age_group_filter" id="age_group_filter">
+        <%= for age_group <- ["all", "18 and under", "18 to 25", "25 to 35", "35 and up"] do %>
+            <option value="<%= age_group %>" <%= if @age_group_filter == age_group, do: "selected" %> >
+                <%= age_group %>
+            </option>
+        <% end %>
+    </select>
+</form>
+<div id="survey-results-chart">
+    <%= @chart_svg %>
+</div>
