@@ -11,7 +11,7 @@
     </div>
 </section>
 <% end %>
-<form phx-change="age_group_filter" phx-target="<%= @myself %>">
+<form phx-change="age_group_filter" phx-target="<%= @myself %>" id="age-group-form">
     <label>Fitler by age group:</label>
     <select name="age_group_filter" id="age_group_filter">
         <%= for age_group <- ["all", "18 and under", "18 to 25", "25 to 35", "35 and up"] do %>
