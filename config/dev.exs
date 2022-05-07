@@ -61,7 +61,9 @@ config :pento, PentoWeb.Endpoint,
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/pento_web/(live|views)/.*(ex)$",
-      ~r"lib/pento_web/templates/.*(eex)$"
+      ~r"lib/pento_web/templates/.*(eex)$",
+      ~r"lib/pento_web/(live|views)/.*(ex)$",
+      ~r"lib/my_app_web/live/.*(sface)$"
     ]
   ]
 
