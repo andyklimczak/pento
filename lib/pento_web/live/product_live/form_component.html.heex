@@ -24,7 +24,12 @@
     <%= label f, :sku %>
     <%= number_input f, :sku %>
     <%= error_tag f, :sku %>
-  
+
+    <div phx-drop-target={@uploads.image.ref}>
+      <%= live_file_input @uploads.image %>
+    </div>
+    <!-- missing entry for loop stuff, upload_image_error error -->
+
     <div>
       <%= submit "Save", phx_disable_with: "Saving..." %>
     </div>
