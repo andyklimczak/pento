@@ -175,7 +175,7 @@ defmodule PentoWeb.CoreComponents do
   attr :as, :any, default: nil, doc: "the server side parameter to collect all input under"
 
   attr :rest, :global,
-    include: ~w(autocomplete name rel action enctype method novalidate target),
+    include: ~w(multipart autocomplete name rel action enctype method novalidate target),
     doc: "the arbitrary HTML attributes to apply to the form tag"
 
   slot :inner_block, required: true

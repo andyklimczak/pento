@@ -1,0 +1,22 @@
+<.header>
+Send your promo code to a friend
+<:subtitle>Promo code for 10% off</:subtitle>
+</.header>
+
+<div>
+    <.simple_form
+        :let={f}
+        for={@changeset}
+        id="promo-form"
+        phx-change="validate"
+        phx-submit="save">
+
+    <.input field={@changeset[:first_name]} type="text" label="First Name" />
+    <.input field={@changeset[:email]} type="email"
+      label="Email" phx-debounce="blur" />
+
+    <:actions>
+        <.button phx-disable-with="Sending...">Sending promo</.button>
+    </:actions>
+    </.simple_form>
+</div>
