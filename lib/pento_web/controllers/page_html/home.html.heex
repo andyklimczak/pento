@@ -1,4 +1,18 @@
 <.flash_group flash={@flash} />
+<div class="container px-6 py-6">
+<div class="flex items-center gap-4">
+  <%= if @current_user do %>
+      <%= @current_user.email %>
+      <.link href={~p"/products"}>Products</.link>
+    <.link href={~p"/survey"}>Survye</.link>
+    <.link href={~p"/users/settings"}>Settings</.link>
+    <.link href={~p"/users/log_out"} method="delete">Log Out</.link>
+  <% else %>
+    <.link href={~p"/users/register"}>Register</.link>
+    <.link href={~p"/users/log_in"}>Log in</.link>
+    <% end %>
+    </div>
+</div>
 <div class="left-[40rem] fixed inset-y-0 right-0 z-0 hidden lg:block xl:left-[50rem]">
   <svg
     viewBox="0 0 1480 957"
