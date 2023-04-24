@@ -4,6 +4,7 @@
             <%= if @current_user do %>
                 <.link href={~p"/products"}>Products</.link>
                 <.link href={~p"/survey"}>Survye</.link>
+                <.link href={~p"/admin/dashboard"}>Dashboard</.link>
                 <.link href={~p"/users/settings"}>Settings</.link>
                 <.link href={~p"/users/log_out"} method="delete">Log Out</.link>
             <% else %>
