@@ -52,7 +52,7 @@ defmodule PentoWeb.UserRegistrationLiveTest do
       response = html_response(conn, 200)
       assert response =~ email
       assert response =~ "Settings"
-      assert response =~ "Log out"
+      assert response =~ "Log Out"
     end
 
     test "renders errors for duplicated email", %{conn: conn} do
